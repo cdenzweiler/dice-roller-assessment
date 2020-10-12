@@ -13,20 +13,18 @@ diceRolls = []
 roll.addEventListener("click", function () {
     count = 0
 
-   if (count < dice.value) {
+    while (count < dice.value) {
 
         let dieIndiv = (Math.floor(Math.random() * 6 + 1));
 
         diceRolls.push(dieIndiv)
         count++;
-        
 
-    } 
+    }
 
     sum = (diceRolls.reduce((a, b) => a + b, 0));
 
-        total.innerHTML = "Sum of " + dice.value + " dice Rolled: " + sum;
-    // total.insertAdjacentText("beforeend", diceRolls);
+    total.innerHTML = `Total of ${dice.value} dice Rolled: ${sum}`;
 
 })
 
@@ -36,9 +34,10 @@ roll.addEventListener("click", function () {
 
 show_button.addEventListener("click", function () {
 
-    diceRolls.push(" apple", " carrot", " lima bean")
-    diceRolls.forEach(element => show.innerHTML = '<li>' + diceRolls;
+    // diceRolls.forEach(element => show.innerHTML = '<li>' + diceRolls);
 
+    diceRolls = '<li id="dice">' + sum + "</li>";
+    show.innerHTML = '<li id="dice">' + diceRolls + "</li>";
 })
 
 /////////// Clear Button  ///////////////////
@@ -52,4 +51,8 @@ clear.addEventListener("click", function () {
     total.innerHTML = "Total:";
 })
 
+// 
+// allRollsElement.innerHTML += newDiceString;
+
+// console.log(newDiceString)
 
