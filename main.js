@@ -34,9 +34,11 @@ roll.addEventListener("click", function () {
 
 show_button.addEventListener("click", function () {
 
+        // let i = 0
+        // while (i <  )
     // diceRolls.forEach(element => show.innerHTML = '<li>' + diceRolls);
 
-    diceRolls = '<li id="dice">' + sum + "</li>";
+    diceRolls = '<li id="dice">' + dieIndiv + "</li>";
     show.innerHTML = '<li id="dice">' + diceRolls + "</li>";
 })
 
